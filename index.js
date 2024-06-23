@@ -12,5 +12,3 @@ app.use("", routes);
 
 app.listen(port)
 console.log("Server Running On Port: " + port)
-
-export default app;
