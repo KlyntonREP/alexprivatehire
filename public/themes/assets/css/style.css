@@ -30681,12 +30681,12 @@ hr.style1 {
   );
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .hero-img-1 .thumb img {
     -webkit-clip-path: none;
     clip-path: none;
   }
-}
+} */
 
 .hero-img-1 .hero-shape {
   position: absolute;
