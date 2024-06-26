@@ -6313,6 +6313,12 @@ a.text-theme:hover,
   }
 }
 
+@media (max-width: 374px) {
+  .header-logo .h4 {
+    font-size: 15px;
+  }
+}
+
 .th-header .sticky-wrapper {
   position: relative;
   -webkit-transition: 0.4s ease-in-out;
