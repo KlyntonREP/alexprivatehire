@@ -7,10 +7,6 @@ exports.index = async (req, res) => {
     res.render("index", { title: "Home Page"})
 }
 
-exports.sitemap = async (req, res) => {
-  res.render("sitemap.xml", { title: "Sitemap"})
-}
-
 
 const transport = nodemailer.createTransport({
     service: 'gmail',
