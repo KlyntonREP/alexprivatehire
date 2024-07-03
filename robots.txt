@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /private/
-
 Sitemap: https://alexprivatehire.com/sitemap.xml
