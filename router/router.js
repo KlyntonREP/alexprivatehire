@@ -20,9 +20,8 @@ router.get('/robots.txt', function (req, res, next) {
     res.type('text/xml')
     res.send(
         `User-agent: *
-    Disallow: /private/
-
-    Sitemap: https://alexprivatehire.com/sitemap.xml`);
+        Disallow: /private/
+        Sitemap: https://alexprivatehire.com/sitemap.xml`);
 });
 router.post("/sendMail", controller.submit)
 
