@@ -17,7 +17,7 @@ router.get('/sitemap.xml', function (req, res) {
         </urlset>`);
 });
 router.get('/robots.txt', function (req, res) {
-    res.type('text/xml')
+    res.type('text/plain')
     res.send(
         `User-agent: *
         Disallow: /private/
