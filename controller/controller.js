@@ -8,7 +8,7 @@ exports.index = async (req, res) => {
 }
 
 exports.sitemap = async (req, res) => {
-  res.render("sitemap", { title: "Sitemap"})
+  res.render("sitemap.xml", { title: "Sitemap"})
 }
 
 
