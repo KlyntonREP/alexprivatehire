@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /index
-Disallow: /cgi-bin/
-Disallow: /images/
-Disallow: /pages/thankyou.html
+Disallow: /private/
+
+Sitemap: https://alexprivatehire.com/sitemap.xml
