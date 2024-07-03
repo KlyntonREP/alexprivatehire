@@ -5,8 +5,8 @@ router = express.Router();
 
 router.get("/", controller.index);
 router.get('/sitemap.xml', function(req, res) {
-    res.type('text/xml')
-    res.sendFile('../sitemap.xml');
+    res.set('Content-Type', 'text/xml')
+    res.sendFile('../sitemap.xml', { root: "." });
 });
 router.post("/sendMail", controller.submit)
 
