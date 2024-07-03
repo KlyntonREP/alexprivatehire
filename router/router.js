@@ -4,7 +4,7 @@ const controller = require('../controller/controller')
 router = express.Router();
 
 router.get("/", controller.index);
-router.get('/sitemap.xml', function (req, res, next) {
+router.get('/sitemap.xml', function (req, res) {
     res.type('text/xml')
     res.send(
         `<?xml version="1.0" encoding="UTF-8"?>
@@ -16,7 +16,7 @@ router.get('/sitemap.xml', function (req, res, next) {
         </url>
         </urlset>`);
 });
-router.get('/robots.txt', function (req, res, next) {
+router.get('/robots.txt', function (req, res) {
     res.type('text/xml')
     res.send(
         `User-agent: *
