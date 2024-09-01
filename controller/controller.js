@@ -9,8 +9,8 @@ exports.index = async (req, res) => {
 
 
 const transport = nodemailer.createTransport({
-    service: 'gmail',
-    port: 587,
+  host: 'smtp.office365.com',
+  port: 587,
     secure: false,
     auth: {
       user: process.env.AUTH_EMAIL,
@@ -32,17 +32,17 @@ exports.submit = async(req, res) => {
     <p><strong>Message:</strong> ${message}</p>
 `
       const mailOptions = {
+        from: process.env.AUTH_EMAIL, 
         replyTo: email,  // Set the reply-to to the user's email
         to: process.env.EMAIL,
         subject: "Customer Contact To Alex Private Hire",
         html: messages
       }
     transport.sendMail(mailOptions,function(error, info){
-        if(error){
-            console.log(error)
-        }else{
-            console.log("Email Sent: " + info.response)
-        }
-        res.redirect("/")
+      if (error) {
+        return res.json({ error: 'Failed to send email. Please try again later.' });
+    } else {
+        return res.json({ success: 'Email sent successfully!' });
+    }
     })
 }
